@@ -1,1 +1,5 @@
 __pycache__/
+*.xlsx
+*.txt
+.DS_Store
+*.json
