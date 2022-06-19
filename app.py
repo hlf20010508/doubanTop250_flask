@@ -1,10 +1,21 @@
 from flask import Flask, render_template, jsonify
 from ezmysql import ConnectionSync
+import json
 
-host = '124.223.224.49'
-database = 'doubanTop250'
-user = 'root'
-password = '1486922887'
+try:
+    config_file = open('config.json', 'r')
+except:
+    print('未找到数据库配置文件，请先运行config.py')
+    print('python config.py')
+    exit()
+config = json.load(config_file)
+config_file.close()
+host = config['host']
+database = config['database']
+user = config['user']
+password = config['password']
+table = config['table']
+
 # create connection
 db = ConnectionSync(
     host,
@@ -12,7 +23,7 @@ db = ConnectionSync(
     user,
     password,
 )
-result = db.query('select brief from main')
+result = db.query('select brief from '+table)
 
 app = Flask(__name__)
 
