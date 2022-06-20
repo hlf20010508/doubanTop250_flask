@@ -11,6 +11,7 @@
 <br/>
 
 需要doubanTop250_scrapy项目https://github.com/hlf20010508/doubanTop250_scrapy.git
+
 需要用到mysql数据库，请提前建立好一个数据库，并在其中创建一个表
 
 <br/>
