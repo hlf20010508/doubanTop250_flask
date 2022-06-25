@@ -6,8 +6,6 @@
 
 否则会出现路径错误
 
-建议在命令行中运行
-
 <br/>
 
 需要doubanTop250_scrapy项目https://github.com/hlf20010508/doubanTop250_scrapy.git
